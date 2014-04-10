@@ -1,0 +1,201 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	/* margin: 0; */
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	position: fixed;
+	vertical-align: baseline;
+	position: relative;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+	background-color: #B8DEB8;
+}
+
+.bird-img {
+	height: 60px;
+	width: 60px;
+	right: 0;
+	top: -54px;
+	position: absolute;
+}
+
+.bird-talk {
+	position: absolute;
+	right: -120px;
+	top: -58px;
+	font-family: Arimo;
+	display: none;
+}
+
+.top-white-line {
+	width: 620px;
+	height: 1px;
+	color: white;
+	background-color: white;
+	border: 1px solid white;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	position: relative;
+	margin-top: 60px;
+}
+
+h1 {
+	font-size: 70px;
+	color: white;
+	text-align: center;
+	font-family: Pacifico;
+}
+
+.bottom-white-line {
+	width: 620px;
+	height: 1px;
+	color: white;
+	background-color: white;
+	border: 1px solid white;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 50px;
+}
+
+form {
+	text-align: center;
+}
+
+input {
+	width: 500px;
+	height: 35px;
+	border-radius: 10px;
+	border: none;
+	font-family: Arimo;
+	font-size: 20px;
+	color: #848A84;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-top: 15px;
+}
+
+#addItem {
+	display: inline;
+	float: right;
+	font-family: Arimo;
+	font-size: 20px;
+	color: white;
+	position: relative;
+	right: 270px;
+	top: 12px;
+	background-color: #EDA85F;
+	padding: 4px;
+	border-radius: 5px;
+}
+
+.list-item-section {
+	margin-top: 80px;
+}
+
+.white-rec {
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white;
+	width: 500px;
+	height: 50px;
+	border-radius: 10px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	position: relative;
+}
+
+.white-rec li {
+	display: inline;
+}
+
+.white-square {
+	height: 33px;
+	width: 33px;
+	left: 15px;
+	top: 10px;
+	position: relative;
+}
+
+.check-mark {
+	height: 20px;
+	width: 20px;
+	left: -15px;
+	top: 3px;
+	position: relative;
+	display: none;
+}
+
+.white-rec .thing {
+	display: inline;
+	font-family: Arimo;
+	font-size: 25px;
+	color: #414541;
+	position: absolute;
+	top: 13px;
+	left: 60px;
+}
+
+#removeItem {
+	display: inline;
+	float: right;
+	font-family: Arimo;
+	font-size: 20px;
+	color: white;
+	position: relative;
+	right: 13px;
+	top: 6px;
+	background-color: #EDA85F;
+	padding: 4px;
+	border-radius: 5px;
+}
+
+
+
+
+
+
