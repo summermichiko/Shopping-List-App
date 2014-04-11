@@ -100,13 +100,21 @@ h1 {
 	margin-right: auto;
 	margin-top: 10px;
 	margin-bottom: 50px;
+	position: relative;
+}
+
+.enter-item {
+	width: 600px;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 form {
 	text-align: center;
+	position: relative;
 }
 
-input {
+#make-new-item-box {
 	width: 500px;
 	height: 35px;
 	border-radius: 10px;
@@ -117,6 +125,7 @@ input {
 	padding-left: 10px;
 	padding-right: 10px;
 	margin-top: 15px;
+	position: relative;
 }
 
 #addItem {
@@ -126,7 +135,7 @@ input {
 	font-size: 20px;
 	color: white;
 	position: relative;
-	right: 270px;
+	right: 20px;
 	top: 12px;
 	background-color: #EDA85F;
 	padding: 4px;
@@ -149,10 +158,6 @@ input {
 	position: relative;
 }
 
-.white-rec li {
-	display: inline;
-}
-
 .white-square {
 	height: 33px;
 	width: 33px;
@@ -167,6 +172,7 @@ input {
 	left: -15px;
 	top: 3px;
 	position: relative;
+	z-index: 100;
 	display: none;
 }
 
@@ -180,7 +186,7 @@ input {
 	left: 60px;
 }
 
-#removeItem {
+.removeItem {
 	display: inline;
 	float: right;
 	font-family: Arimo;
