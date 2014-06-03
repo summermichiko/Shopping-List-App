@@ -59,13 +59,15 @@ body {
 	right: 0;
 	top: -54px;
 	position: absolute;
+	cursor: pointer;
+	cursor: hand;
 }
 
 .bird-talk {
 	position: absolute;
-	right: -120px;
+	right: -70px;
 	top: -58px;
-	font-family: Arimo;
+	font-family: Lato;
 	display: none;
 }
 
@@ -119,7 +121,8 @@ form {
 	height: 35px;
 	border-radius: 10px;
 	border: none;
-	font-family: Arimo;
+	font-family: Lato;
+	font-weight: 300;
 	font-size: 20px;
 	color: #848A84;
 	padding-left: 10px;
@@ -131,15 +134,18 @@ form {
 #addItem {
 	display: inline;
 	float: right;
-	font-family: Arimo;
+	font-family: Lato;
 	font-size: 20px;
 	color: white;
 	position: relative;
 	right: 20px;
-	top: 12px;
+	top: 14px;
 	background-color: #EDA85F;
 	padding: 4px;
 	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+	cursor: hand;
 }
 
 .list-item-section {
@@ -161,9 +167,11 @@ form {
 .white-square {
 	height: 33px;
 	width: 33px;
-	left: 15px;
-	top: 10px;
+	left: 13px;
+	top: 9px;
 	position: relative;
+	cursor: pointer;
+	cursor: hand;
 }
 
 .check-mark {
@@ -174,11 +182,14 @@ form {
 	position: relative;
 	z-index: 100;
 	display: none;
+	cursor: pointer;
+	cursor: hand;
 }
 
 .white-rec .thing {
 	display: inline;
-	font-family: Arimo;
+	font-family: Lato;
+	font-weight: 300;
 	font-size: 25px;
 	color: #414541;
 	position: absolute;
@@ -189,15 +200,18 @@ form {
 .removeItem {
 	display: inline;
 	float: right;
-	font-family: Arimo;
+	font-family: Lato;
 	font-size: 20px;
 	color: white;
 	position: relative;
 	right: 13px;
-	top: 6px;
+	top: 7px;
 	background-color: #EDA85F;
 	padding: 4px;
 	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+	cursor: hand;
 }
 
 
