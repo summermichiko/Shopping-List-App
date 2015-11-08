@@ -5,26 +5,36 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
 		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 		<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width" />
 		<title>Shopping List App</title>
 	</head>
 	<body class="bodyWrapper">
 		<div class="container">
 			<div class="groceryBagWrapper">
 				<img src="images/groceryBag2.png" class="groceryBagImage">
+				<div class="innerWrapper hidden-xs">
+					<input type="text" class="addNewInputBig" placeholder="Add an item to your grocery list" maxlength="25"><button class="addNewButton">Add</button>
+				</div>
 			</div>
 		</div>
 		<script type="text/javascript">
-			var userHeight = $(window).height() -383;
+			var userHeight;
+			if ($(window).width > 767) {
+				userHeight = $(window).height() -383;
+			} else {
+				userHeight = $(window).height() -187;
+			}
 			document.write('<div class="darkBlueBase" style="min-height:' + userHeight + 'px;">');
 		</script>
-			<div class="container">
-				<div class="contentWrapper">
-					<div class="enterItemWrapper">
+			<div class="contentWrapper">
+				<div class="enterItemWrapper hidden-lg hidden-md hidden-sm">
+					<div class="container contentContainerSmall">
 						<div class="innerWrapper">
-							<input type="text" class="addNewInput" placeholder="Add an item to your grocery list" maxlength="25"><button class="addNewButton">Add</button>
+							<input type="text" class="addNewInputSmall" placeholder="Add an item" maxlength="25"><button class="addNewButton">Add</button>
 						</div>
 					</div>
+				</div>
+				<div class="container">
 					<ul class="listItemSection"></ul>
 				</div>
 			</div>

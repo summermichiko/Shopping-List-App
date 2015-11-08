@@ -61,7 +61,7 @@ table {
 .darkBlueBase {
 	background-color: #1C5970;
 	padding-bottom: 40px;
-	padding-top: 30px;
+	padding-top: 20px;
 }
 
 .enterItemWrapper {
@@ -78,11 +78,11 @@ table {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: -98px;
-	margin-bottom: 40px;
+	margin-top: -68px;
+	margin-bottom: 18px;
 }
 
-.addNewInput {
+.addNewInputBig {
 	width: 450px;
 	height: 50px;
 	border-radius: 2px 0 0 2px;
@@ -95,7 +95,7 @@ table {
 	display: inline-block;
 }
 
-.addNewInput:focus {
+.addNewInputBig:focus {
 	outline: none;
 }
 
@@ -126,7 +126,7 @@ table {
 	margin-right: auto;
 	display: block;
 	background-color: white;
-	width: 527px;
+	width: 525px;
 	height: 50px;
 	border-radius: 2px;
 	margin-bottom: 5px;
@@ -146,9 +146,7 @@ table {
 .removeLink {
 	display: inline-block;
 	float: right;
-	font-family: Quicksand;
 	height: 15px;
-	color: #2C7E9D;
 	position: relative;
 	margin-top: 9px;
 	margin-right: 10px;
@@ -179,21 +177,41 @@ table {
 
 @media (max-width: 767px) {
 	.groceryBagImage {
-		width: 350px;
+		width: 300px;
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
 	}
 
-	.innerWrapper {
-		width: 100%;
-		margin-top: -15px;
+	.contentContainerSmall {
+		margin-top: -20px;
 	}
 
-	.addNewInput {
-		width: 224px;
+	.enterItemWrapper {
+		background-color: #bfbfbf;
+	}
+
+	.innerWrapper {
+		width: 100%;
+		margin-top: 0;
+		padding-top: 20px;
+	}
+
+	.addNewInputSmall {
+		border-radius: 2px 0 0 2px;
+		border: none;
+		font-family: Quicksand;
+		color: #545454;
+		padding-left: 15px;
+		padding-right: 15px;
+		display: inline-block;
+		width: 200px;
 		font-size: 14px;
 		height: 40px;
+	}
+
+	.addNewInputSmall:focus {
+		outline: none;
 	}
 
 	.addNewButton {
@@ -202,7 +220,7 @@ table {
 	}
 
 	.whiteRec {
-		width: 300px;
+		width: 275px;
 		height: 40px;
 	}
 
@@ -212,9 +230,8 @@ table {
 	}
 
 	.removeLink {
-		font-size: 14px;
-		margin-top: 8px;
-		margin-right: 15px;
+		margin-top: 6px;
+		margin-right: 8px;
 	}
 
 	.checkboxImage {

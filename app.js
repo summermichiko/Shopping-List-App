@@ -1,33 +1,51 @@
 $(document).ready(function() {
-
-	// change placeholder depending on user screen width
-	if ($(window).width() > 767) {
-		$('.addNewInput').attr('placeholder', 'Add an item to your grocery list');
-	} else {
-		$('.addNewInput').attr('placeholder', 'Add an item');
-	}
-
 	// click on add button
 	$(".addNewButton").click(function(e) {
 		e.preventDefault();
-		var newItem = $(".addNewInput").val();
-		if (newItem != "") {
-			$(this).closest("body").find(".listItemSection").prepend(
-				'<li>' +
-					'<div class="whiteRec">' +
-						'<img class="checkboxImage" src="images/checkboxImage.png">' +
-						'<img class="checkImage" src="images/checkImage.png">' +
-						'<div class="item">' +
-							newItem +
+		var newItemBig = $(".addNewInputBig").val(),
+			newItemSmall = $(".addNewInputSmall").val(),
+			appendedValue;
+
+		if ($(window).width() > 767) {
+			if (newItemBig != "") {
+				appendedValue = newItemBig;
+				$(this).closest("body").find(".listItemSection").prepend(
+					'<li>' +
+						'<div class="whiteRec">' +
+							'<img class="checkboxImage" src="images/checkboxImage.png">' +
+							'<img class="checkImage" src="images/checkImage.png">' +
+							'<div class="item">' +
+								appendedValue +
+							'</div>' +
+							'<a href="javascript: undefined;" class="removeLink">' +
+								'<img class="removeLink" src="images/removeLink.png">' +
+							'</button>' +
 						'</div>' +
-						'<a href="javascript: undefined;" class="removeLink">' +
-							'<img class="removeLink" src="images/removeLink.png">' +
-						'</button>' +
-					'</div>' +
-				'</li>'
-			);
-			$(document).find(".whiteRec:first").hide().slideDown();
-			$(".addNewInput").val("");
+					'</li>'
+				);
+				$(document).find(".whiteRec:first").hide().slideDown();
+				$(".addNewInputBig").val("");
+			}
+		} else {
+			if (newItemSmall != "") {
+				appendedValue = newItemSmall;
+				$(this).closest("body").find(".listItemSection").prepend(
+					'<li>' +
+						'<div class="whiteRec">' +
+							'<img class="checkboxImage" src="images/checkboxImage.png">' +
+							'<img class="checkImage" src="images/checkImage.png">' +
+							'<div class="item">' +
+								appendedValue +
+							'</div>' +
+							'<a href="javascript: undefined;" class="removeLink">' +
+								'<img class="removeLink" src="images/removeLink.png">' +
+							'</button>' +
+						'</div>' +
+					'</li>'
+				);
+				$(document).find(".whiteRec:first").hide().slideDown();
+				$(".addNewInputSmall").val("");
+			}
 		}
 	});
 
