@@ -1,32 +1,66 @@
 $(document).ready(function() {
-	$("#make-new-item-box").focus();
-	$(".bird-img").click(function() {
-		$(this).closest(".top-white-line").find(".bird-talk").toggle();
-	});
-		$("#addItem").click(function(e) {
+
+	// change placeholder depending on user screen width
+	if ($(window).width() > 767) {
+		$('.addNewInput').attr('placeholder', 'Add an item to your grocery list');
+	} else {
+		$('.addNewInput').attr('placeholder', 'Add an item');
+	}
+
+	// click on add button
+	$(".addNewButton").click(function(e) {
 		e.preventDefault();
-		var newItem = $("#make-new-item-box").val();
-		$(this).closest("body").find(".list-item-section").prepend('<ul class="white-rec"><img src="file:///Users/summermcdonald/Desktop/Project/Shopping%20List%20App/images/images.jpg" class="white-square"><img src="images/imgres.jpg" class="check-mark"><li class="thing">' + newItem + '</li><button type="remove" class="removeItem">Remove</button></ul>').slideDown("slow");
-    	$("#make-new-item-box").val('');
+		var newItem = $(".addNewInput").val();
+		if (newItem != "") {
+			$(this).closest("body").find(".listItemSection").prepend(
+				'<li>' +
+					'<div class="whiteRec">' +
+						'<img class="checkboxImage" src="images/checkboxImage.png">' +
+						'<img class="checkImage" src="images/checkImage.png">' +
+						'<div class="item">' +
+							newItem +
+						'</div>' +
+						'<a href="javascript: undefined;" class="removeLink">' +
+							'<img class="removeLink" src="images/removeLink.png">' +
+						'</button>' +
+					'</div>' +
+				'</li>'
+			);
+			$(document).find(".whiteRec:first").hide().slideDown();
+			$(".addNewInput").val("");
+		}
 	});
 
-	$(document).on("click", ".removeItem", remove);
+	// hit return triggers click on add button
+	$(document).keypress(function(e){
+		if(e.which == 13){
+			$('.addNewButton').click();
+		}
+	});
 
-	$(document).on("click", ".white-square", showCheck);
+	// toggle check inside of checkbox
+	$(document).on("click", ".checkboxImage", function() {
+		$(this).closest('.whiteRec').find('.checkImage').show();
+	});
+	$(document).on("click", ".checkImage", function() {
+		$(this).hide();
+	});
 
-	$(document).on("click", ".check-mark", hideCheck);
+	$(document).on("click", ".removeLink", remove);
+
+	$(document).on("click", ".whiteSquare", showCheck);
+
+	$(document).on("click", ".checkMark", hideCheck);
 });
 
 function remove() {
-	$(this).closest(".white-rec").slideUp("slow");
+	$(this).closest(".whiteRec").slideUp();
 }
 
 function showCheck() {
-	$(this).closest(".white-rec").find(".check-mark").show();
+	$(this).closest(".whiteRec").find(".checkMark").show();
 }
 
 function hideCheck() {
 	$(this).hide();
 }
-
-

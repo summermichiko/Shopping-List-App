@@ -1,8 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
+/* HTML RESET */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -16,7 +12,6 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	/* margin: 0; */
 	padding: 0;
 	border: 0;
 	font-size: 100%;
@@ -25,7 +20,8 @@ time, mark, audio, video {
 	vertical-align: baseline;
 	position: relative;
 }
-/* HTML5 display-role reset for older browsers */
+
+/* RESET FOR OLDER BROWSERS */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -49,170 +45,195 @@ table {
 	border-spacing: 0;
 }
 
-body {
-	background-color: #B8DEB8;
+/* MY STYLE SHEET */
+.bodyWrapper {
+	background-color: #2C7E9D;
 }
 
-/*.bird-img {
-	height: 60px;
-	width: 60px;
-	right: 0;
-	top: -54px;
-	position: absolute;
-	cursor: pointer;
-	cursor: hand;
-}
-
-.bird-talk {
-	position: absolute;
-	right: -70px;
-	top: -58px;
-	font-family: Lato;
-	display: none;
-}*/
-
-.top-white-line {
-	width: 620px;
-	height: 1px;
-	color: white;
-	background-color: white;
-	border: 1px solid white;
+.groceryBagImage {
+	width: 700px;
+	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	position: relative;
-	margin-top: 60px;
+	padding-top: 40px;
 }
 
-h1 {
-	font-size: 70px;
-	color: white;
+.darkBlueBase {
+	background-color: #1C5970;
+	padding-bottom: 40px;
+	padding-top: 30px;
+}
+
+.enterItemWrapper {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
 	text-align: center;
-	font-family: Pacifico;
+	margin-bottom: 20px;
 }
 
-.bottom-white-line {
-	width: 620px;
-	height: 1px;
-	color: white;
-	background-color: white;
-	border: 1px solid white;
+.innerWrapper {
+	width: 525px;
+	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 10px;
-	margin-bottom: 50px;
-	position: relative;
+	margin-top: -98px;
+	margin-bottom: 40px;
 }
 
-.enter-item {
-	width: 600px;
-	margin-right: auto;
-	margin-left: auto;
-}
-
-form {
-	text-align: center;
-	position: relative;
-}
-
-#make-new-item-box {
-	width: 500px;
-	height: 35px;
-	border-radius: 10px;
-	border: none;
-	font-family: Lato;
-	font-weight: 300;
-	font-size: 20px;
-	color: #848A84;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin-top: 15px;
-	position: relative;
-}
-
-#addItem {
-	display: inline;
-	float: right;
-	font-family: Lato;
-	font-size: 20px;
-	color: white;
-	position: relative;
-	right: 20px;
-	top: 14px;
-	background-color: #EDA85F;
-	padding: 6px;
-	border-radius: 5px;
-	border: none;
-	cursor: pointer;
-	cursor: hand;
-}
-
-.list-item-section {
-	margin-top: 80px;
-}
-
-.white-rec {
-	margin-left: auto;
-	margin-right: auto;
-	background-color: white;
-	width: 500px;
+.addNewInput {
+	width: 450px;
 	height: 50px;
-	border-radius: 10px;
-	margin-top: 15px;
-	margin-bottom: 15px;
-	position: relative;
+	border-radius: 2px 0 0 2px;
+	border: none;
+	font-family: Quicksand;
+	font-size: 18px;
+	color: #545454;
+	padding-left: 15px;
+	padding-right: 15px;
+	display: inline-block;
 }
 
-.white-square {
-	height: 33px;
-	width: 33px;
-	left: 13px;
-	top: 9px;
+.addNewInput:focus {
+	outline: none;
+}
+
+.addNewButton {
+	display: inline-block;
+	font-size: 18px;
+	font-family: Quicksand;
+	color: white;
 	position: relative;
+	background-color: #C34445;
+	height: 50px;
+	width: 75px;
+	border-radius: 0 2px 2px 0;
+	border: none;
 	cursor: pointer;
-	cursor: hand;
 }
 
-.check-mark {
-	height: 20px;
-	width: 20px;
-	left: -12px;
-	top: 3px;
+.addNewButton:hover {
+	background-color: #D6696A;
+}
+
+.addNewButton:focus {
+	outline: none;
+}
+
+.whiteRec {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	background-color: white;
+	width: 527px;
+	height: 50px;
+	border-radius: 2px;
+	margin-bottom: 5px;
 	position: relative;
-	z-index: 100;
-	display: none;
-	cursor: pointer;
-	cursor: hand;
 }
 
-.white-rec .thing {
+.item {
 	display: inline;
-	font-family: Lato;
-	font-weight: 300;
-	font-size: 25px;
+	font-family: Quicksand;
+	font-size: 18px;
 	color: #414541;
 	position: absolute;
-	top: 13px;
 	left: 60px;
+	margin-top: 13px;
 }
 
-.removeItem {
-	display: inline;
+.removeLink {
+	display: inline-block;
 	float: right;
-	font-family: Lato;
-	font-size: 20px;
-	color: white;
+	font-family: Quicksand;
+	height: 15px;
+	color: #2C7E9D;
 	position: relative;
-	right: 13px;
-	top: 7px;
-	background-color: #EDA85F;
-	padding: 6px;
-	border-radius: 5px;
-	border: none;
+	margin-top: 9px;
+	margin-right: 10px;
 	cursor: pointer;
-	cursor: hand;
 }
+
+.removeLink:hover {
+	text-decoration: none;
+	color: #1C5970;
+}
+
+.checkboxImage {
+	width: 25px;
+	position: absolute;
+	top: 13px;
+	left: 15px;
+	cursor: pointer;
+}
+
+.checkImage {
+	width: 25px;
+	display: none;
+	position: absolute;
+	top: 13px;
+	left: 15px;
+	cursor: pointer;
+}
+
+@media (max-width: 767px) {
+	.groceryBagImage {
+		width: 350px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.innerWrapper {
+		width: 100%;
+		margin-top: -15px;
+	}
+
+	.addNewInput {
+		width: 224px;
+		font-size: 14px;
+		height: 40px;
+	}
+
+	.addNewButton {
+		font-size: 14px;
+		height: 40px;
+	}
+
+	.whiteRec {
+		width: 300px;
+		height: 40px;
+	}
+
+	.item {
+		font-size: 14px;
+		margin-top: 10px;
+	}
+
+	.removeLink {
+		font-size: 14px;
+		margin-top: 8px;
+		margin-right: 15px;
+	}
+
+	.checkboxImage {
+		width: 20px;
+		position: absolute;
+		top: 10px;
+		left: 15px;
+	}
+
+	.checkImage {
+		width: 20px;
+		display: none;
+		position: absolute;
+		top: 10px;
+		left: 15px;
+	}
+}
+
+
 
 
 
