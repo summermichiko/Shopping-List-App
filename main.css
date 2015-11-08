@@ -188,7 +188,8 @@ table {
 	}
 
 	.enterItemWrapper {
-		background-color: #bfbfbf;
+		background-color: #dedede;
+		padding-bottom: 2px;
 	}
 
 	.innerWrapper {
