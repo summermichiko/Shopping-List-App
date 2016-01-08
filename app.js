@@ -1,15 +1,12 @@
 $(document).ready(function() {
-	// click on add button
-	$(".addNewButton").click(function(e) {
-		e.preventDefault();
+	var app = $(".groceryListApp");
+
+	// add item on click
+	$(".addNewButton").click(function() {
 		var newItemBig = $(".addNewInputBig").val(),
 			newItemSmall = $(".addNewInputSmall").val(),
-			appendedValue;
-
-		if ($(window).width() > 767) {
-			if (newItemBig != "") {
-				appendedValue = newItemBig;
-				$(this).closest("body").find(".listItemSection").prepend(
+			appendFunc = function(appendedValue) {
+				app.find(".listItemSection").prepend(
 					'<li>' +
 						'<div class="whiteRec">' +
 							'<img class="checkboxImage" src="images/checkboxImage.png">' +
@@ -23,62 +20,55 @@ $(document).ready(function() {
 						'</div>' +
 					'</li>'
 				);
-				$(document).find(".whiteRec:first").hide().slideDown();
+			};
+
+		if ($(window).width() > 767) {
+			if (newItemBig !== "") {
+				appendFunc(newItemBig);
+				app.find(".whiteRec:first").hide().slideDown();
 				$(".addNewInputBig").val("");
 			}
 		} else {
-			if (newItemSmall != "") {
-				appendedValue = newItemSmall;
-				$(this).closest("body").find(".listItemSection").prepend(
-					'<li>' +
-						'<div class="whiteRec">' +
-							'<img class="checkboxImage" src="images/checkboxImage.png">' +
-							'<img class="checkImage" src="images/checkImage.png">' +
-							'<div class="item">' +
-								appendedValue +
-							'</div>' +
-							'<a href="javascript: undefined;" class="removeLink">' +
-								'<img class="removeLink" src="images/removeLink.png">' +
-							'</button>' +
-						'</div>' +
-					'</li>'
-				);
-				$(document).find(".whiteRec:first").hide().slideDown();
+			if (newItemSmall !== "") {
+				appendFunc(newItemSmall);
+				app.find(".whiteRec:first").hide().slideDown();
 				$(".addNewInputSmall").val("");
 			}
 		}
 	});
 
-	// hit return triggers click on add button
-	$(document).keypress(function(e){
-		if(e.which == 13){
-			$('.addNewButton').click();
+	// trigger click when return is pressed
+	// edit item when return is pressed
+	app.keypress(function(e) {
+		if(e.which == 13) {
+			$(".addNewButton").click();
+			$(".editInput").blur();
 		}
 	});
 
-	// toggle check inside of checkbox
-	$(document).on("click", ".checkboxImage", function() {
-		$(this).closest('.whiteRec').find('.checkImage').show();
+	// edit item on click
+	app.on("click", ".item", function() {
+		var itemText = $(this).text();
+		$(this).text("").append($("<input class='editInput' maxlength='25'/>"));
+		app.find(".editInput").val(itemText);
+		$("input").focus();
 	});
-	$(document).on("click", ".checkImage", function() {
+	app.on("blur", ".editInput", function(e) {
+		if ($(this).val() !== "") {
+			$(this).parent().text($(this).val());
+		}
+	});
+
+	// toggle checkmark inside of checkbox
+	app.on("click", ".checkboxImage", function() {
+		$(this).closest(".whiteRec").find(".checkImage").show();
+	});
+	app.on("click", ".checkImage", function() {
 		$(this).hide();
 	});
 
-	$(document).on("click", ".removeLink", remove);
-
-	$(document).on("click", ".whiteSquare", showCheck);
-
-	$(document).on("click", ".checkMark", hideCheck);
+	// remove item on click
+	app.on("click", ".removeLink", function() {
+		$(this).closest(".whiteRec").slideUp();
+	});
 });
-
-function remove() {
-	$(this).closest(".whiteRec").slideUp();
-}
-
-function showCheck() {
-	$(this).closest(".whiteRec").find(".checkMark").show();
-}
-
-function hideCheck() {
-	$(this).hide();
-}

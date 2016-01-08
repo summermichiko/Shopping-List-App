@@ -45,7 +45,7 @@ table {
 	border-spacing: 0;
 }
 
-/* MY STYLE SHEET */
+/* BACKGROUND/IMAGE STYLES */
 .bodyWrapper {
 	background-color: #2C7E9D;
 }
@@ -64,6 +64,7 @@ table {
 	padding-top: 20px;
 }
 
+/* ADD ITEM INPUT STYLES */
 .enterItemWrapper {
 	display: block;
 	margin-left: auto;
@@ -99,6 +100,7 @@ table {
 	outline: none;
 }
 
+/* ADD ITEM BUTTON STYLES */
 .addNewButton {
 	display: inline-block;
 	font-size: 18px;
@@ -121,6 +123,7 @@ table {
 	outline: none;
 }
 
+/* APPENDED ITEM STYLES */
 .whiteRec {
 	margin-left: auto;
 	margin-right: auto;
@@ -141,6 +144,17 @@ table {
 	position: absolute;
 	left: 60px;
 	margin-top: 13px;
+}
+
+.editInput {
+	border: none;
+	width: 400px;
+	margin-top: -1px;
+	margin-left: -1px;
+}
+
+.editInput:focus {
+	outline: none;
 }
 
 .removeLink {
@@ -175,12 +189,10 @@ table {
 	cursor: pointer;
 }
 
+/* MOBILE STYLES */
 @media (max-width: 767px) {
 	.groceryBagImage {
 		width: 300px;
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
 	}
 
 	.contentContainerSmall {
@@ -206,7 +218,7 @@ table {
 		padding-left: 15px;
 		padding-right: 15px;
 		display: inline-block;
-		width: 200px;
+		width: 220px;
 		font-size: 14px;
 		height: 40px;
 	}
@@ -218,16 +230,21 @@ table {
 	.addNewButton {
 		font-size: 14px;
 		height: 40px;
+		width: 65px;
 	}
 
 	.whiteRec {
-		width: 275px;
+		width: 285px;
 		height: 40px;
 	}
 
 	.item {
 		font-size: 14px;
 		margin-top: 10px;
+	}
+
+	.editInput {
+		width: 175px;
 	}
 
 	.removeLink {
@@ -237,24 +254,11 @@ table {
 
 	.checkboxImage {
 		width: 20px;
-		position: absolute;
 		top: 10px;
-		left: 15px;
 	}
 
 	.checkImage {
 		width: 20px;
-		display: none;
-		position: absolute;
 		top: 10px;
-		left: 15px;
 	}
 }
-
-
-
-
-
-
-
-
