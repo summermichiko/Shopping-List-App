@@ -157,19 +157,17 @@ table {
 	outline: none;
 }
 
-.removeLink {
+.removeLinkWrapper {
 	display: inline-block;
+	position: relative;
+}
+
+.removeLink {
 	float: right;
 	height: 15px;
-	position: relative;
 	margin-top: 9px;
 	margin-right: 10px;
 	cursor: pointer;
-}
-
-.removeLink:hover {
-	text-decoration: none;
-	color: #1C5970;
 }
 
 .checkboxImage {

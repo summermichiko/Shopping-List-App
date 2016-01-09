@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	var app = $(".groceryListApp");
+	var app = $(".shoppingListApp");
 
 	// add item on click
 	$(".addNewButton").click(function() {
@@ -14,9 +14,9 @@ $(document).ready(function() {
 							'<div class="item">' +
 								appendedValue +
 							'</div>' +
-							'<a href="javascript: undefined;" class="removeLink">' +
+							'<a href="javascript:undefined;" class="removeLink">' +
 								'<img class="removeLink" src="images/removeLink.png">' +
-							'</button>' +
+							'</a>' +
 						'</div>' +
 					'</li>'
 				);
