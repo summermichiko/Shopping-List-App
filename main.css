@@ -47,19 +47,19 @@ table {
 
 /* BACKGROUND/IMAGE STYLES */
 .bodyWrapper {
-	background-color: #2C7E9D;
+	background-color: #2c7e9d;
 }
 
 .groceryBagImage {
-	width: 700px;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 	padding-top: 40px;
+	width: 700px;
 }
 
 .darkBlueBase {
-	background-color: #1C5970;
+	background-color: #1c5970;
 	padding-bottom: 40px;
 	padding-top: 20px;
 }
@@ -67,33 +67,33 @@ table {
 /* ADD ITEM INPUT STYLES */
 .enterItemWrapper {
 	display: block;
+	margin-bottom: 20px;
 	margin-left: auto;
 	margin-right: auto;
 	position: relative;
 	text-align: center;
-	margin-bottom: 20px;
 }
 
 .innerWrapper {
-	width: 525px;
 	display: block;
+	margin-bottom: 18px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: -68px;
-	margin-bottom: 18px;
+	width: 525px;
 }
 
 .addNewInputBig {
-	width: 450px;
-	height: 50px;
-	border-radius: 2px 0 0 2px;
 	border: none;
+	border-radius: 2px 0 0 2px;
+	color: #545454;
+	display: inline-block;
 	font-family: Quicksand;
 	font-size: 18px;
-	color: #545454;
+	height: 50px;
 	padding-left: 15px;
 	padding-right: 15px;
-	display: inline-block;
+	width: 450px;
 }
 
 .addNewInputBig:focus {
@@ -102,55 +102,55 @@ table {
 
 /* ADD ITEM BUTTON STYLES */
 .addNewButton {
-	display: inline-block;
-	font-size: 18px;
-	font-family: Quicksand;
-	color: white;
-	position: relative;
-	background-color: #C34445;
-	height: 50px;
-	width: 75px;
-	border-radius: 0 2px 2px 0;
+	background-color: #c34445;
 	border: none;
+	border-radius: 0 2px 2px 0;
 	cursor: pointer;
+	color: #fff;
+	display: inline-block;
+	font-family: Quicksand;
+	font-size: 18px;
+	height: 50px;
+	position: relative;
+	width: 75px;
 }
 
 .addNewButton:hover {
-	background-color: #D6696A;
+	background-color: #d6696a;
 }
 
 .addNewButton:focus {
 	outline: none;
 }
 
-/* APPENDED ITEM STYLES */
+/* ADDED ITEM STYLES */
 .whiteRec {
+	background-color: #fff;
+	border-radius: 2px;
+	display: block;
+	height: 50px;
+	margin-bottom: 5px;
 	margin-left: auto;
 	margin-right: auto;
-	display: block;
-	background-color: white;
-	width: 525px;
-	height: 50px;
-	border-radius: 2px;
-	margin-bottom: 5px;
 	position: relative;
+	width: 525px;
 }
 
 .item {
+	color: #414541;
 	display: inline;
 	font-family: Quicksand;
 	font-size: 18px;
-	color: #414541;
-	position: absolute;
 	left: 60px;
 	margin-top: 13px;
+	position: absolute;
 }
 
 .editInput {
 	border: none;
-	width: 400px;
-	margin-top: -1px;
 	margin-left: -1px;
+	margin-top: -1px;
+	width: 400px;
 }
 
 .editInput:focus {
@@ -163,19 +163,19 @@ table {
 }
 
 .removeLink {
+	cursor: pointer;
 	float: right;
 	height: 15px;
-	margin-top: 9px;
 	margin-right: 10px;
-	cursor: pointer;
+	margin-top: 9px;
 }
 
 .checkboxImage {
-	width: 25px;
+	cursor: pointer;
+	left: 15px;
 	position: absolute;
 	top: 13px;
-	left: 15px;
-	cursor: pointer;
+	width: 25px;
 }
 
 .checkImage {
@@ -209,16 +209,16 @@ table {
 	}
 
 	.addNewInputSmall {
-		border-radius: 2px 0 0 2px;
 		border: none;
-		font-family: Quicksand;
+		border-radius: 2px 0 0 2px;
 		color: #545454;
-		padding-left: 15px;
-		padding-right: 15px;
 		display: inline-block;
-		width: 220px;
+		font-family: Quicksand;
 		font-size: 14px;
 		height: 40px;
+		padding-left: 15px;
+		padding-right: 15px;
+		width: 220px;
 	}
 
 	.addNewInputSmall:focus {
@@ -232,8 +232,8 @@ table {
 	}
 
 	.whiteRec {
-		width: 285px;
 		height: 40px;
+		width: 285px;
 	}
 
 	.item {
@@ -246,17 +246,17 @@ table {
 	}
 
 	.removeLink {
-		margin-top: 6px;
 		margin-right: 8px;
+		margin-top: 6px;
 	}
 
 	.checkboxImage {
-		width: 20px;
 		top: 10px;
+		width: 20px;
 	}
 
 	.checkImage {
-		width: 20px;
 		top: 10px;
+		width: 20px;
 	}
 }
